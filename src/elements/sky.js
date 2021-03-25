@@ -2,6 +2,7 @@
 class Sky {
   constructor() {
     this.clouds = [];
+    
     this.stars = [];
     this.color = color(135, 206, 235);
     this.isNight = false;
