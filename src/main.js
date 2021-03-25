@@ -15,8 +15,7 @@ function setup() {
 
 }
 
-function draw() {
-  
+function draw() {  
   // Controlador verifica estado e altera objeto
   controller.watchTheHour(sky);  
   // Renderiza objeto
