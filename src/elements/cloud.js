@@ -1,14 +1,20 @@
-// let cloud =  new Cloud(100, 200, 50);
-class Cloud {
+// Classe que representa uma nuvem
+class Cloud extends SkyElement {
   constructor(x, y, initialSize) {
-    this.x = x;
-    this.y = y;
+    super(x, y);
     this.size = initialSize;
+    this.moveFactor = 2 * random(-1, 1);
   }
 
-  wind() {
-    let moveFactor = 2;
-    this.x = this.x + moveFactor;
+  move(){
+    this._wind();
+  }
+  
+  _wind() {    
+    if(this.x >= 700 || this.x <= 0){
+      this.moveFactor *= -1;
+    }
+    this.x = this.x + this.moveFactor;
   }
 
   render() {

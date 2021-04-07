@@ -1,16 +1,20 @@
 
-
-class Star {
+// Classe que representa uma estrela
+class Star extends SkyElement {
     constructor(x, y, initialSize){
-      this.x = x;
-      this.y = y;    
+      super(x, y, () => this.shiny());    
       this.size = initialSize;    
     }
-    
-    shiny(){
-       this.size = random(5, 10);      
+    // Sobrescrita do método move
+    move(){
+      this._shiny();
+    }
+
+    _shiny(){
+       this.size = random(2, 5);      
     }  
     
+    // Sobrescrita do método move
     render(){
       noStroke();
       fill(256);
