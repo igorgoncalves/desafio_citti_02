@@ -10,8 +10,8 @@ class Factory {
   // retorna objeto com posições aleatórias
   getRandomPosition() {    
     return {
-      x: random(0, 700),
-      y: random(0, 200),
+      x: random(0, width),
+      y: random(0, height/2),
     };
   }
 }

@@ -11,7 +11,7 @@ class Cloud extends SkyElement {
   }
   
   _wind() {    
-    if(this.x >= 700 || this.x <= 0){
+    if(this.x >= width || this.x <= 0){
       this.moveFactor *= -1;
     }
     this.x = this.x + this.moveFactor;

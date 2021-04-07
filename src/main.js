@@ -17,7 +17,7 @@ function setup() {
   // Muda a velocidade de pintura
   frameRate(10);
   // Cria tela de pintura
-  createCanvas(700, 400);
+  createCanvas(innerWidth, innerHeight);
   // Instancias dos objetos
   sky = new Sky();  
   controller = new SkyController();
